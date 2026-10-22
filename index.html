@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050711" />
+    <meta name="description" content="SHUNZE WEN — UNSW Data Science 本科生个人主页。" />
+    <title>SHUNZE WEN — Data Science</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <canvas class="starfield" aria-hidden="true"></canvas>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="ambient ambient--top" aria-hidden="true"></div>
+    <div class="ambient ambient--bottom" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="回到首页">SW<span class="wordmark__dot">.</span></a>
+      <nav class="top-nav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#skills">技能</a>
+        <a class="nav-contact" href="#contact">联系 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__eyebrow reveal">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>个人主页</span>
+          <span class="eyebrow-divider" aria-hidden="true"></span>
+          <span>数据科学 · UNSW</span>
+        </div>
+        <h1 class="hero__title" id="hero-title" aria-label="SHUNZE WEN">
+          <span class="title-line"><span class="title-word">SHUNZE</span></span>
+          <span class="title-line title-line--second"><span class="title-word">WEN<span class="title-period">.</span></span></span>
+        </h1>
+        <div class="hero__bottom reveal">
+          <p class="hero__intro">在数据与世界之间，保持好奇。</p>
+          <a class="scroll-cue" href="#about"><span class="scroll-cue__line"></span><span>向下探索</span><span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero__orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+      </section>
+
+      <section class="content-grid" aria-label="个人介绍与技能">
+        <article class="panel about-panel reveal" id="about">
+          <div class="panel__topline"><span class="section-index">01 / 关于我</span><span class="panel-mark" aria-hidden="true">✳</span></div>
+          <div class="about-copy">
+            <p class="about-kicker">你好，我是 Shunze。</p>
+            <h2>用数据的视角，<br />理解<span class="accent-text">复杂世界</span>。</h2>
+            <p class="body-copy">我在新南威尔士大学（UNSW）攻读数据科学本科。</p>
+          </div>
+          <div class="about-footer"><span class="mono-label">DATA SCIENCE STUDENT</span><span class="footer-rule"></span><span class="mono-label">UNSW</span></div>
+        </article>
+
+        <article class="panel globe-panel reveal" aria-label="旋转的数字地球装饰">
+          <div class="panel__topline"><span class="section-index">一个好奇的坐标</span><span class="live-indicator"><span></span>持续探索</span></div>
+          <div class="globe-wrap"><canvas id="globe" aria-hidden="true"></canvas><div class="globe-halo" aria-hidden="true"></div><div class="globe-caption"><span>不断观察</span><span class="caption-dash"></span><span>持续学习</span></div></div>
+          <div class="globe-coordinates"><span>01</span><span class="coordinate-line"></span><span>探索 · 发现 · 理解</span></div>
+        </article>
+
+        <article class="panel skills-panel reveal" id="skills">
+          <div class="panel__topline"><span class="section-index">02 / 技能与兴趣</span><span class="section-count">03</span></div>
+          <h2 class="panel-heading">正在学习，<br /><span class="muted-heading">也持续实践。</span></h2>
+          <div class="skill-list" aria-label="技能">
+            <span class="skill-chip"><span class="skill-chip__index">01</span>C</span>
+            <span class="skill-chip"><span class="skill-chip__index">02</span>Python</span>
+            <span class="skill-chip"><span class="skill-chip__index">03</span>Statistics</span>
+          </div>
+          <div class="skills-decoration" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </article>
+
+        <article class="panel contact-panel reveal" id="contact">
+          <div class="panel__topline"><span class="section-index">03 / 保持联系</span><span class="contact-arrow" aria-hidden="true">↗</span></div>
+          <div class="contact-content"><p class="contact-kicker">有想法，欢迎来信。</p><h2>开启一段<br /><span class="accent-text">新对话。</span></h2>
+            <a class="email-link" href="mailto:wenshunze@gmail.com"><span>wenshunze@gmail.com</span><span class="email-link__icon" aria-hidden="true">↗</span></a>
+          </div>
+          <div class="contact-bottom"><span class="mono-label">EMAIL</span><button class="copy-button" type="button" data-copy-email aria-label="复制邮箱地址"><span class="copy-icon" aria-hidden="true">▢</span><span data-copy-label>复制邮箱</span></button></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="footer-mark" href="#top">SHUNZE WEN<span>.</span></a><span class="footer-note">个人主页 · 数据科学</span><a class="back-top" href="#top">返回顶部 <span aria-hidden="true">↑</span></a></footer>
+  </body>
+</html>
